@@ -26,4 +26,63 @@ html {
 
 body {
   background-color: var(--oscuro);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+header p {
+  margin-top: 35px;
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: var(--fw-700);
+  color: var(--claro);
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  background-color: var(--oscuro-medio);
+  width: 550px;
+  height: 250px;
+}
+
+.card__info {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__info-name {
+font-size: 3.2rem;
+color: var(--claro);
+font-weight: var(--fw-700);
+}
+
+.form{
+    height: 150px;
+  width: 350px;
+}
+
+form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardNumber{
+  text-align: right;
+  color: var(--claro);
+  font-size: 1.8rem;
+  font-weight: var(--fw-700);
+  margin-bottom: 25px;
 }
