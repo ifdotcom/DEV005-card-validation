@@ -11,19 +11,22 @@ btn.addEventListener("click", (e) => {
   // obtener el valor del input
   const numberValue = inputNumber.value;
 
-  //   validar: solo numeros 0-9, solo 16 digitos, no campos vacios
-  const regEx = /^[0-9]/;
+  //   validar: solo numeros 0-9,  no campos vacios, solo 16 digitos,
 
-  const validacion = regEx.test(numberValue);
+  const regEx = /^[0-9]+$/;
+  const validationNumber = regEx.test(numberValue);
 
-  console.log(validacion)
-//   if (regEx.search(numberValue)) {
-//     console.log("tiene letras");
-//   } else {
-//     console.log("Formato correcto");
-//   }
+  //   convertir el string en array para saber la longitud
+  const arrNumbers = numberValue.split("");
 
-  //   ejecutar la funcion isValid e isMaskify
+  //   validar si solo son numeros y ademas la longitud es igual a 16
+  if (validationNumber && arrNumbers.length === 16) {
+    //   ejecutar la funcion isValid e isMaskify
+    console.log("Formato correcto");
+    console.log(arrNumbers);
+  } else {
+    console.log("algo falló");
+  }
 });
 
 console.log(validator);
