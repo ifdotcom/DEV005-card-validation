@@ -22,7 +22,7 @@ btn.addEventListener("click", (e) => {
 
 
   //   validar si solo son numeros y ademas la longitud es igual a 16
-  if (validationNumber && arrNumbers.length === 16) {
+  if (validationNumber && arrNumbers.length === 13) {
     //   ejecutar la funcion isValid e isMaskify
     validator.isValid(arrNumbers);
     console.log("Formato correcto");
