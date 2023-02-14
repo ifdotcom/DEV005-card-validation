@@ -19,11 +19,14 @@ btn.addEventListener("click", (e) => {
   //   convertir el string en array para saber la longitud
   const arrNumbers = numberValue.split("");
 
+
+
   //   validar si solo son numeros y ademas la longitud es igual a 16
   if (validationNumber && arrNumbers.length === 16) {
     //   ejecutar la funcion isValid e isMaskify
+    validator.isValid(arrNumbers);
     console.log("Formato correcto");
-    console.log(arrNumbers);
+    
   } else {
     console.log("algo falló");
   }
