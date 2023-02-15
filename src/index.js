@@ -21,7 +21,7 @@ btn.addEventListener("click", (e) => {
   const arrNumbers = numberValue.split("");
 
   //   validar si solo son numeros 
-  if (validationNumber) {
+  if (validationNumber && arrNumbers.length === 13) {
     //   ejecutar la funcion isValid e isMaskify
     validator.isValid(arrNumbers);
     errorText.style.display = "none";

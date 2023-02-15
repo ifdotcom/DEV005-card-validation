@@ -1,5 +1,11 @@
 const validator = {
   isValid: (arr) => {
+
+
+
+
+
+    
     const arrPar = [];
     const arrImpar = [];
 
@@ -26,8 +32,7 @@ const validator = {
     }
 
     // sumar numeros si son 2 elementos
-
-    
+    return true;
   },
 
   isMakify: () => {},
