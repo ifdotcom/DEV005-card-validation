@@ -24,6 +24,10 @@ const validator = {
       const element = arrImpar[index] * 2;
       console.log(element);
     }
+
+    // sumar numeros si son 2 elementos
+
+    
   },
 
   isMakify: () => {},

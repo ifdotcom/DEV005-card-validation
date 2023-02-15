@@ -3,7 +3,8 @@ import validator from "./validator.js";
 // traer el nunmero del DOM
 
 const btn = document.querySelector(".btn"),
-  inputNumber = document.querySelector(".numberCard");
+  inputNumber = document.querySelector(".numberCard"),
+  errorText = document.querySelector(".errorText");
 
 btn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -25,10 +26,10 @@ btn.addEventListener("click", (e) => {
   if (validationNumber && arrNumbers.length === 13) {
     //   ejecutar la funcion isValid e isMaskify
     validator.isValid(arrNumbers);
-    console.log("Formato correcto");
+    errorText.style.display = "none";
     
   } else {
-    console.log("algo falló");
+    errorText.style.display = "block";
   }
 });
 

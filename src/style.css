@@ -50,6 +50,7 @@ main {
   background-color: var(--oscuro-medio);
   width: 550px;
   height: 250px;
+  border-radius: 30px;
 }
 
 .card__info {
@@ -60,13 +61,13 @@ main {
 }
 
 .card__info-name {
-font-size: 3.2rem;
-color: var(--claro);
-font-weight: var(--fw-700);
+  font-size: 3.2rem;
+  color: var(--claro);
+  font-weight: var(--fw-700);
 }
 
-.form{
-    height: 150px;
+.form {
+  height: 200px;
   width: 350px;
 }
 
@@ -79,10 +80,46 @@ form {
   align-items: center;
 }
 
-.cardNumber{
+.cardNumber {
   text-align: right;
   color: var(--claro);
   font-size: 1.8rem;
   font-weight: var(--fw-700);
   margin-bottom: 25px;
+}
+
+.numberCard {
+  height: 40px;
+  width: 250px;
+  border-radius: 20px;
+  border: 1px transparent solid;
+  background-color: var(--oscuro-medio);
+  padding: 20px;
+  color: var(--claro);
+  outline: none;
+}
+.numberCard:focus {
+  border: 1px solid var(--claro);
+}
+
+.errorText{
+  display: none;
+  margin-top: 8px;
+  color: var(--error);
+  font-size: 1.4rem;
+}
+.btn {
+  margin-top: 35px;
+  width: 150px;
+  height: 45px;
+  border-radius: 20px;
+  background-color: var(--oscuro-medio);
+  color: var(--claro);
+  font-weight: var(--fw-700);
+  border: 1px transparent;
+}
+
+.btn:hover {
+  cursor: pointer;
+  border: 1px solid var(--claro);
 }
