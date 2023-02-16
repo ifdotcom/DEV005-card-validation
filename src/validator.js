@@ -1,16 +1,22 @@
 const validator = {
-  isValid: (arr) => {
+  isValid: (numberCard) => {
+    console.log(numberCard);
 
-
-
+    // separar caracteres
+    const arrNumbers = numberCard.split("");
+    console.log(arrNumbers)
+    //   validar: solo numeros 0-9,  no campos vacios, ¿solo 16 digitos?
 
 
     
+    // const regEx = /^[0-9]+$/;
+    // const validationNumber = regEx.test(arrNumbers);
+    // -----------------algoritmo de luhn---------------------------------------
     const arrPar = [];
     const arrImpar = [];
 
     // invertir el arr de números
-    const arrReverse = arr.reverse();
+    const arrReverse = arrNumbers.reverse();
     console.log(arrReverse);
 
     // filtrar todos aquellos que tengan posicion par
@@ -32,7 +38,6 @@ const validator = {
     }
 
     // sumar numeros si son 2 elementos
-    return true;
   },
 
   isMakify: () => {},
