@@ -4,16 +4,25 @@ import validator from "./validator.js";
 
 const btn = document.querySelector(".btn"),
   inputNumber = document.querySelector(".numberCard");
+
+document.addEventListener("keypress", (e) => {
+  console.log(e);
+
+  if (e.charCode >= 48 && e.charCode <= 57) {
+    console.log("numero");
+  } else {
+    e.preventDefault();
+  }
+});
 btn.addEventListener("click", (e) => {
   e.preventDefault();
 
   // obtener el valor del input
   const numberValue = inputNumber.value;
   validator.isValid(numberValue);
-    
 
-  
 
+  // ------------
   // //   validar si solo son numeros
   // if (validationNumber) {
   //   //   ejecutar la funcion isValid e isMaskify
@@ -22,4 +31,3 @@ btn.addEventListener("click", (e) => {
   //   errorText.style.display = "block";
   // }
 });
-
