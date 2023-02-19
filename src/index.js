@@ -6,9 +6,9 @@ const btn = document.querySelector(".btn"),
   inputNumber = document.querySelector(".numberCard"),
   errorText = document.querySelector(".errorText");
 
-// document.addEventListener("keypress", (e) => {
-//   e.charCode >= 48 && e.charCode <= 57 ? true : e.preventDefault();
-// });
+document.addEventListener("keypress", (e) => {
+  e.charCode >= 48 && e.charCode <= 57 ? true : e.preventDefault();
+});
 btn.addEventListener("click", (e) => {
   e.preventDefault();
 
@@ -21,11 +21,11 @@ btn.addEventListener("click", (e) => {
   //   validar si solo son numeros
   if (validator.isValid(numberValue) !== false) {
     //   ejecutar la funcion isValid e isMaskify
-    console.log("valida")
+    // console.log("valida")
     errorText.style.display = "none";
   } else {
     errorText.style.display = "block";
   }
 
-  validator.isMakify(numberValue)
+  validator.maskify(numberValue)
 });

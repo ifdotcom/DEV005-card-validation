@@ -64,8 +64,11 @@ const validator = {
     }
   },
 
-  isMakify: (numberCard) => {|1
-    console.log(numberCard)
+  maskify: (num) => {
+    // console.log(typeof(num))
+    const textModify =  (num).slice(0, -4).replace(/./g, "#") + ("" + num).slice(-4);
+    // console.log(textModify)
+    return textModify;
   },
 };
 
