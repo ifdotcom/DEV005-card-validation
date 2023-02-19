@@ -1,57 +1,73 @@
 const validator = {
   isValid: (numberCard) => {
-    if (numberCard !== "") {
-      // separar caracteres
-      const arrNumbers = numberCard.split("");
-      console.log(arrNumbers);
-      // -----------------algoritmo de luhn---------------------------------------
-      const arrPar = [];
-      const arrImpar = [];
-      const arrDoble = [];
+    const arrPar = [];
+    const arrImpar = [];
+    // Funcion para invertir un array
+    const arrayReverse = (arr) => {
+      const arrReverse = arr.reverse();
+      return arrReverse;
+    };
 
-      // invertir el arr de números
-      const arrReverse = arrNumbers.reverse();
-      console.log(arrReverse);
-
-      // filtrar todos aquellos que tengan posicion par
-      //# ¿agregarlos a un nuevo array?¿agregar los impares a otro arr?
-      arrReverse.filter((value, index) => {
+    // Funcion para filtrar la posicion par
+    const positionPar = (arr) => {
+      const arrInverted = arr;
+      arrInverted.filter((value, index) => {
         if (index % 2 === 0) {
           arrPar.push(value);
         } else if (index % 2 !== 0) {
           arrImpar.push(value);
         }
       });
+      return arrInverted;
+    };
 
-      console.log(arrPar);
-      console.log(arrImpar);
-
-      for (let index = 0; index < arrImpar.length; index++) {
-        const element = arrImpar[index] * 2;
-        arrDoble.push(element.toString());
-      }
-      
-      let sumanums = arrDoble.map(element => {
-        return suma(element)
+    // Función que suma los numeros >= 10
+    const sumNumbers = (num) => {
+      let sum = 0;
+      num.split("").forEach((element) => {
+        sum += parseInt(element);
       });
+      return sum;
+    };
 
-      function suma(num) {
-        let sum = 0;
-        num.split("").forEach((element) => {
-          sum += parseInt(element);
-        });
-        return sum;
-      }
+    // Funcion que da la suma final
 
-      console.log(arrDoble);
-      console.log(sumanums);
-      // sumar numeros si son 2 elementos arrImpar
+    const arrSum = (arr) => {
+      let sum = 0;
+      arr.forEach((e) => {
+        sum += parseInt(e);
+      });
+      return sum;
+    };
+
+    // funcion algoritmo
+
+    const luhn = (numberCreditCard) => {
+      // separar caracteres
+      const arrNumbers = numberCreditCard.split("");
+      const arrInverted = arrayReverse(arrNumbers);
+      positionPar(arrInverted);
+      const arrDoble = arrImpar.map((element) => {
+        return (element * 2).toString();
+      });
+      const arrSumNums = arrDoble.map((element) => {
+        return sumNumbers(element).toString();
+      });
+      const arrfinal = arrSumNums.concat(arrPar);
+      const sumValidation = arrSum(arrfinal);
+      return sumValidation;
+    };
+
+    if (luhn(numberCard) % 10 === 0 && numberCard !== "") {
+      return true;
     } else {
       return false;
     }
   },
 
-  isMakify: () => {},
+  isMakify: (numberCard) => {
+    
+  },
 };
 
 export default validator;
