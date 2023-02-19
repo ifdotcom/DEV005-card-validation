@@ -10,15 +10,14 @@ const validator = {
 
     // Funcion para filtrar la posicion par
     const positionPar = (arr) => {
-      const arrInverted = arr;
-      arrInverted.filter((value, index) => {
+      arr.filter((value, index) => {
         if (index % 2 === 0) {
           arrPar.push(value);
         } else if (index % 2 !== 0) {
           arrImpar.push(value);
         }
       });
-      return arrInverted;
+      return arr;
     };
 
     // Función que suma los numeros >= 10
@@ -65,8 +64,8 @@ const validator = {
     }
   },
 
-  isMakify: (numberCard) => {
-    
+  isMakify: (numberCard) => {|1
+    console.log(numberCard)
   },
 };
 
