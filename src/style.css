@@ -1,16 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;700;900&display=swap");
 :root {
   /* font */
 
-  --ff-js: "Josefin Sans", sans-serif;
+  --ff: "Raleway", sans-serif;
   /*  font-weight */
   --fw-300: 300;
   --fw-700: 700;
+  --fw-900: 900;
   /* colors */
   --oscuro: #261c2c;
-  --oscuro-medio: #3e2c41;
+  --oscuro-medio: #453350;
+  --oscuro-bajo: #581845;
+  --morado: #836198;
   --claro: #f4f4f4;
-  --error: #ff251e;
+  --error: #ff5733;
+  --valid: #daf7a6;
 }
 
 * {
@@ -21,7 +25,7 @@
 
 html {
   font-size: 62.5%;
-  font-family: var(--ff-js);
+  font-family: var(--ff);
 }
 
 body {
@@ -29,7 +33,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-content: center;
   align-items: center;
 }
@@ -37,19 +41,30 @@ body {
 header p {
   margin-top: 35px;
   text-align: center;
-  font-size: 3.2rem;
-  font-weight: var(--fw-700);
+  letter-spacing: 1px;
+  font-size: 5rem;
+  font-weight: var(--fw-900);
   color: var(--claro);
+}
+header span {
+  color: var(--morado);
 }
 main {
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 .card {
+  /* background: rgb(255, 203, 58);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 203, 58, 1) 22%,
+    rgba(202, 97, 68, 1) 97%
+  ); */
+  /* background: rgb(88,72,255);
+background: linear-gradient(180deg, rgba(88,72,255,1) 3%, rgba(141,226,235,1) 99%);  */
   background-color: var(--oscuro-medio);
-  width: 550px;
-  height: 250px;
+  width: 540px;
+  height: 285px;
   border-radius: 30px;
 }
 
@@ -63,12 +78,13 @@ main {
 .card__info-name {
   font-size: 3.2rem;
   color: var(--claro);
-  font-weight: var(--fw-700);
+  font-weight: var(--fw-300);
 }
 
 .form {
   height: 200px;
   width: 350px;
+  margin-left: 90px;
 }
 
 form {
@@ -77,21 +93,19 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 .cardNumber {
-  text-align: right;
   color: var(--claro);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: var(--fw-700);
-  margin-bottom: 25px;
+  margin-bottom: 12px;
 }
 
 .numberCard {
   height: 40px;
-  width: 250px;
-  border-radius: 20px;
+  width: 100%;
+  border-radius: 4px;
   border: 1px transparent solid;
   background-color: var(--oscuro-medio);
   padding: 20px;
@@ -101,8 +115,13 @@ form {
 .numberCard:focus {
   border: 1px solid var(--claro);
 }
-
-.errorText{
+.validText {
+  display: none;
+  margin-top: 8px;
+  color: var(--valid);
+  font-size: 1.4rem;
+}
+.errorText {
   display: none;
   margin-top: 8px;
   color: var(--error);
@@ -117,6 +136,7 @@ form {
   color: var(--claro);
   font-weight: var(--fw-700);
   border: 1px transparent;
+  align-self: center;
 }
 
 .btn:hover {

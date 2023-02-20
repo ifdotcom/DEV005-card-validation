@@ -7,19 +7,20 @@
   </head>
   <body>
     <header>
-      <p>BanCode</p>
+      <p>Ban<span>Code<span></span></p>
     </header>
     <main>
       <section class="card">
         <div class="card__info">
-          <p class="card__info-name">3456 2343 3565 7634</p>
+          <p class="card__info-name"></p>
         </div>
       </section>
       <section class="form">
         <form>
           <label for="cardNumber" class="cardNumber">Número de tarjeta</label>
-          <input type="text" name="cardNumber" class="numberCard">
-          <span class="errorText">Número de tarjeta incorrecto.</span>
+          <input type="text" name="cardNumber" class="numberCard" placeholder="Ej. 1234 5678 0000 0000">
+          <span class="validText">Número de tarjeta válido.</span>
+          <span class="errorText">Número de tarjeta inválido.</span>
           <button class="btn">Agregar</button>
         </form>
       </section>
