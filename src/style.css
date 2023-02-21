@@ -132,7 +132,7 @@ margin-right: 40px;
   font-weight: var(--fw-300);
 }
 .form {
-  height: 200px;
+  height: 500px;
   width: 350px;
   margin-left: 90px;
 }
@@ -145,14 +145,14 @@ form {
   justify-content: center;
 }
 
-.cardNumber {
+.labelData {
   color: var(--claro);
   font-size: 1.6rem;
   font-weight: var(--fw-700);
   margin-bottom: 12px;
 }
 
-.numberCard {
+.inputData {
   height: 40px;
   width: 100%;
   border-radius: 4px;
@@ -161,19 +161,34 @@ form {
   padding: 20px;
   color: var(--claro);
   outline: none;
+  margin-bottom: 15px;
 }
-.numberCard:focus {
+
+.cardName{
+  margin-top: 10px;
+}
+.dateCard, .cvvCard{
+  margin-top: 12px;
+  font-family: var(--ff);
+}
+.inputData:focus {
   border: 1px solid var(--claro);
+}
+
+.card__data {
+  display: flex;
+  gap: 50px;
+
 }
 .validText {
   display: none;
-  margin-top: 8px;
+  /* margin-top: 8px; */
   color: var(--valid);
   font-size: 1.4rem;
 }
 .errorText {
   display: none;
-  margin-top: 8px;
+  /* margin-top: 8px; */
   color: var(--error);
   font-size: 1.4rem;
 }

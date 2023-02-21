@@ -25,25 +25,38 @@
           <div class="card__info-data">
             <div class="card__info-data-name">
               <span>Nombre</span>
-              <span class="name">Fernanda Vidal</span>
+              <span class="name"></span>
             </div>
             <div class="card__info-data-expiry">
               <span>Fecha de vencimiento</span>
-              <span class="date">09/20</span>
+              <span class="date"></span>
             </div>
             <div class="card__info-data-cvv">
-              <span>cvv</span>
-              <span class="cvv">000</span>
+              <span>CVV</span>
+              <span class="cvv"></span>
             </div>
           </div>
         </div>
       </section>
       <section class="form">
         <form>
-          <label for="cardNumber" class="cardNumber">Número de tarjeta</label>
-          <input type="text" name="cardNumber" class="numberCard" placeholder="Ej. 1234 5678 0000 0000">
+          
+          <label for="cardNumber" class="cardNumber labelData">Número de tarjeta</label>
+          <input type="text" name="cardNumber" class="numberCard inputData" placeholder="Ej. 1234 5678 0000 0000">
           <span class="validText">Número de tarjeta válido.</span>
           <span class="errorText">Número de tarjeta inválido.</span>
+          <label for="cardName" class="cardName labelData">Nombre en la tarjeta</label>
+          <input type="text" name="cardName" class="nameCard inputData" placeholder="Ej. Fernanda Vidal">
+          <div class="card__data">
+            <div class="card__data-date">
+              <label for="cardDate" class="cardDate labelData">Fecha de vencimiento</label>
+              <input type="date" name="cardDate" class="dateCard inputData" placeholder="Ej. 19/01/23">
+            </div>
+            <div class="card__data-cvv">
+              <label for="cardCvv" class="cardCvv labelData">CVV</label>
+              <input type="text" name="cardCvv" class="cvvCard inputData" placeholder="Ej. 000" maxlength="3">
+            </div>
+          </div>
           <button class="btn">Agregar</button>
         </form>
       </section>
