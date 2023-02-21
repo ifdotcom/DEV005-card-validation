@@ -6,7 +6,7 @@ const btn = document.querySelector(".btn"),
   inputNumber = document.querySelector(".numberCard"),
   validText = document.querySelector(".validText"),
   errorText = document.querySelector(".errorText"),
-  cardNumber = document.querySelector(".card__info-name");
+  cardNumber = document.querySelector(".card__info-number");
 
 document.addEventListener("keypress", (e) => {
   e.charCode >= 48 && e.charCode <= 57 ? true : e.preventDefault();

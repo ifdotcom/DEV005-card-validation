@@ -63,22 +63,53 @@ main {
   /* background: rgb(88,72,255);
 background: linear-gradient(180deg, rgba(88,72,255,1) 3%, rgba(141,226,235,1) 99%);  */
   background-color: var(--oscuro-medio);
+  box-shadow: -10px 10px 11px 0px rgba(0, 0, 0, 0.75);
   width: 540px;
   height: 285px;
   border-radius: 30px;
 }
-
 .card__info {
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 }
 
-.card__info-name {
+.card__info-chip,
+.card__info-card,
+.card__info-number-card {
+  width: 100%;
+  height: 60px;
+  /* margin-top: 50px; */
+}
+
+.card__info-chip > img,
+.card__info-card > img {
+  width: 50px;
+  height: 50px;
+  margin-left: 40px;
+}
+.card__info-number {
   font-size: 3.2rem;
   color: var(--claro);
   font-weight: var(--fw-300);
+  margin-top: 20px;
+  text-align: center;
+}
+
+.card__info-data {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 50px;
+}
+.card__info-data-name,
+.card__info-data-expiry,
+.card__info-data-cvv {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+  color: var(--claro);
+  font-weight: var(--fw-700);
+  margin-top: 20px;
 }
 
 .form {
