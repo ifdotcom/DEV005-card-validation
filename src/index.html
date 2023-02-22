@@ -7,7 +7,7 @@
   </head>
   <body>
     <header>
-      <p>Ban<span>Code<span></span></p>
+      <p>Ban<span>Code</span></p>
     </header>
     <main>
       <section class="card">
@@ -39,7 +39,7 @@
         </div>
       </section>
       <section class="form">
-        <form>
+        <form id="form__card">
           
           <label for="cardNumber" class="cardNumber labelData">Número de tarjeta</label>
           <input type="text" name="cardNumber" class="numberCard inputData" placeholder="Ej. 1234 5678 0000 0000">
@@ -50,7 +50,7 @@
           <div class="card__data">
             <div class="card__data-date">
               <label for="cardDate" class="cardDate labelData">Fecha de vencimiento</label>
-              <input type="date" name="cardDate" class="dateCard inputData" placeholder="Ej. 19/01/23">
+              <input type="month" name="cardDate" class="dateCard inputData" placeholder="Ej. 19/01/23">
             </div>
             <div class="card__data-cvv">
               <label for="cardCvv" class="cardCvv labelData">CVV</label>
@@ -58,6 +58,7 @@
             </div>
           </div>
           <button class="btn">Agregar</button>
+          
         </form>
       </section>
     </main>
