@@ -175,6 +175,10 @@ form {
   border: 1px solid var(--claro);
 }
 
+.card__data-container{
+  display: none;
+}
+
 .card__data {
   display: flex;
   gap: 50px;
@@ -207,4 +211,8 @@ form {
 .btn:hover {
   cursor: pointer;
   border: 1px solid var(--claro);
+}
+
+.btnSave{
+  display: none;
 }
