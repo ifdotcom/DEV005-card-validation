@@ -25,7 +25,7 @@ btn.addEventListener("click", (e) => {
     nameValue = inputName.value,
     dateValue = inputDate.value,
     cvvValue = inputCvv.value;
-    
+
   //   validar si solo son numeros
   if (validator.isValid(numberValue) !== false) {
     //   ejecutar la funcion isValid e isMaskify
@@ -41,5 +41,8 @@ btn.addEventListener("click", (e) => {
     validText.style.display = "none";
     errorText.style.display = "block";
     cardNumber.innerHTML = `################`;
+    name.innerHTML = ``;
+    date.innerHTML = ``;
+    cvv.innerHTML = ``;
   }
 });
