@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tarjeta de crédito válida</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <p>Ban<span>Code</span></p>
+    </header>
+    <main>
+      <section class="card">
+        <div class="card__info">
+          <div class="card__info-card">
+            <img class="card__info-card-type" src="./visa.png" alt="card" />
+          </div>
+          <div class="card__info-chip">
+            <img src="./chip.png" alt="chip" />
+          </div>
+          <div class="card__info-number-card">
+            <p class="card__info-number"></p>
+          </div>
+          <div class="card__info-data">
+            <div class="card__info-data-name">
+              <span>Nombre</span>
+              <span class="name"></span>
+            </div>
+            <div class="card__info-data-expiry">
+              <span>Fecha de vencimiento</span>
+              <span class="date"></span>
+            </div>
+            <div class="card__info-data-cvv">
+              <span>CVV</span>
+              <span class="cvv"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="form">
+        <form id="form__card">
+          <label for="cardNumber" class="cardNumber labelData"
+            >Número de tarjeta</label
+          >
+          <input
+            type="text"
+            name="cardNumber"
+            class="numberCard inputData"
+            placeholder="Ej. 1234 5678 0000 0000"
+            
+          />
+          <!-- <span class="validText">Número de tarjeta válido.</span>
+          <span class="errorText">Número de tarjeta inválido.</span> -->
+          <div class="card__data-container">
+            <label for="cardName" class="cardName labelData"
+              >Nombre en la tarjeta</label
+            >
+            <input
+              type="text"
+              name="cardName"
+              class="nameCard inputData"
+              placeholder="Ej. Fernanda Vidal"
+              
+            />
+            <div class="card__data">
+              <div class="card__data-date">
+                <label for="cardDate" class="cardDate labelData"
+                  >Fecha de vencimiento</label
+                >
+                <input
+                  type="month"
+                  name="cardDate"
+                  class="dateCard inputData"
+                  placeholder="Ej. 19/01/23"
+                  
+                />
+              </div>
+              <div class="card__data-cvv">
+                <label for="cardCvv" class="cardCvv labelData">CVV</label>
+                <input
+                  type="text"
+                  name="cardCvv"
+                  class="cvvCard inputData"
+                  placeholder="Ej. 000"
+                  maxlength="3"
+                  
+                />
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btnValitate">Validar</button>
+          <div class="btn__container">
+
+            <button class="btn btnSave">Guardar</button>
+            <button class="btn btnRegister">Registrar nueva tarjeta</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>

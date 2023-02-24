@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;700;900&display=swap");
+:root {
+  /* font */
+
+  --ff: "Raleway", sans-serif;
+  /*  font-weight */
+  --fw-300: 300;
+  --fw-700: 700;
+  --fw-900: 900;
+  /* colors */
+  --oscuro: #261c2c;
+  --oscuro-medio: #453350;
+  --oscuro-bajo: #581845;
+  --morado: #836198;
+  --claro: #f4f4f4;
+  --error: #ee3f18;
+  --valid: #a4ea21;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--ff);
+}
+
+body {
+  background-color: var(--oscuro);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+header p {
+  margin-top: 35px;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 5rem;
+  font-weight: var(--fw-900);
+  color: var(--claro);
+}
+header span {
+  color: var(--morado);
+}
+main {
+  display: flex;
+  align-items: center;
+}
+.card {
+  /* background: rgb(255, 203, 58);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 203, 58, 1) 22%,
+    rgba(202, 97, 68, 1) 97%
+  ); */
+  /* background: rgb(88,72,255);
+background: linear-gradient(180deg, rgba(88,72,255,1) 3%, rgba(141,226,235,1) 99%);  */
+  background-color: var(--oscuro-medio);
+  box-shadow: -10px 10px 11px 0px rgba(0, 0, 0, 0.75);
+  width: 540px;
+  height: 300px;
+  border-radius: 30px;
+}
+.card__info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.card__info:first-child {
+  margin-top: 20px;
+}
+.card__info-card {
+  display: flex;
+  flex-direction: column;
+}
+.card__info-card-type {
+align-self: flex-end;
+margin-right: 40px;
+}
+.card__info-chip,
+.card__info-card,
+.card__info-number-card,
+.card__info-data  {
+  width: 100%;
+  height: 65px;
+ 
+}
+
+.card__info-card > img {
+  width: 15%;
+  height: 100%;
+  
+}
+.card__info-chip > img {
+  width: 50px;
+  height: 50px;
+  margin-left: 40px;
+  
+}
+
+.card__info-number {
+  font-size: 3.2rem;
+  color: var(--claro);
+  font-weight: var(--fw-300);
+  margin-top: 20px;
+  text-align: center;
+}
+
+.card__info-data {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 35px;
+}
+.card__info-data-name,
+.card__info-data-expiry,
+.card__info-data-cvv {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+  color: var(--claro);
+  font-weight: var(--fw-700);
+  margin-top: 20px;
+}
+.name, .date, .cvv{
+  font-weight: var(--fw-300);
+}
+.form {
+  height: 500px;
+  width: 400px;
+  margin-left: 90px;
+}
+
+form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.labelData {
+  color: var(--claro);
+  font-size: 1.6rem;
+  font-weight: var(--fw-700);
+  margin-bottom: 12px;
+}
+
+.inputData {
+  height: 40px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px transparent solid;
+  background-color: var(--oscuro-medio);
+  padding: 20px;
+  color: var(--claro);
+  outline: none;
+  margin-bottom: 15px;
+}
+
+.cardName{
+  margin-top: 10px;
+}
+.dateCard, .cvvCard{
+  margin-top: 12px;
+  font-family: var(--ff);
+}
+.inputData:focus {
+  border: 1px solid var(--claro);
+}
+
+.card__data-container{
+  display: none;
+}
+
+.card__data {
+  display: flex;
+  gap: 50px;
+
+}
+.validText {
+  border: 2px solid var(--valid);
+}
+.errorText {
+    border: 2px solid var(--error);
+
+}
+.btn {
+  margin-top: 35px;
+  width: 150px;
+  height: 45px;
+  border-radius: 20px;
+  background-color: var(--oscuro-medio);
+  color: var(--claro);
+  font-weight: var(--fw-700);
+  border: 1px transparent;
+  align-self: center;
+}
+
+.btn:hover {
+  cursor: pointer;
+  border: 1px solid var(--claro);
+}
+
+.btn__container{
+  display: flex;
+  gap: 40px;
+}
+
+.btnSave, .btnRegister{
+  display: none;
+  width: 200px;
+}
+
+
+@media (min-width: 280px){
+
+main{
+  display: block;
+}
+}
