@@ -49,8 +49,8 @@
             placeholder="Ej. 1234 5678 0000 0000"
           
           />
-          <span class="validText">Número de tarjeta válido.</span>
-          <span class="errorText">Número de tarjeta inválido.</span>
+          <!-- <span class="validText">Número de tarjeta válido.</span>
+          <span class="errorText">Número de tarjeta inválido.</span> -->
           <div class="card__data-container">
             <label for="cardName" class="cardName labelData"
               >Nombre en la tarjeta</label
@@ -87,7 +87,11 @@
           </div>
 
           <button class="btn">Validar</button>
-          <button class="btn btnSave">Guardar</button>
+          <div class="btn__container">
+
+            <button class="btn btnSave">Guardar</button>
+            <button class="btn btnRegister">Registrar nueva tarjeta</button>
+          </div>
         </form>
       </section>
     </main>

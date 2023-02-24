@@ -13,8 +13,8 @@
   --oscuro-bajo: #581845;
   --morado: #836198;
   --claro: #f4f4f4;
-  --error: #ff5733;
-  --valid: #daf7a6;
+  --error: #ee3f18;
+  --valid: #a4ea21;
 }
 
 * {
@@ -133,7 +133,7 @@ margin-right: 40px;
 }
 .form {
   height: 500px;
-  width: 350px;
+  width: 400px;
   margin-left: 90px;
 }
 
@@ -185,16 +185,11 @@ form {
 
 }
 .validText {
-  display: none;
-  /* margin-top: 8px; */
-  color: var(--valid);
-  font-size: 1.4rem;
+  border: 2px solid var(--valid);
 }
 .errorText {
-  display: none;
-  /* margin-top: 8px; */
-  color: var(--error);
-  font-size: 1.4rem;
+    border: 2px solid var(--error);
+
 }
 .btn {
   margin-top: 35px;
@@ -213,6 +208,12 @@ form {
   border: 1px solid var(--claro);
 }
 
-.btnSave{
+.btn__container{
+  display: flex;
+  gap: 40px;
+}
+
+.btnSave, .btnRegister{
   display: none;
+  width: 200px;
 }

@@ -5,6 +5,7 @@ import validator from "./validator.js";
 const formContainer = document.querySelector(".card__data-container"),
   btn = document.querySelector(".btn"),
   btnSave = document.querySelector(".btnSave"),
+  btnRegister = document.querySelector(".btnRegister"),
   inputNumber = document.querySelector(".numberCard"),
   inputName = document.querySelector(".nameCard"),
   name = document.querySelector(".name"),
@@ -12,8 +13,6 @@ const formContainer = document.querySelector(".card__data-container"),
   date = document.querySelector(".date"),
   inputCvv = document.querySelector(".cvvCard"),
   cvv = document.querySelector(".cvv"),
-  validText = document.querySelector(".validText"),
-  errorText = document.querySelector(".errorText"),
   cardNumber = document.querySelector(".card__info-number");
 
 inputNumber.addEventListener("keypress", (e) => {
@@ -29,15 +28,17 @@ btn.addEventListener("click", (e) => {
   if (validator.isValid(numberValue) !== false) {
     const numMaskify = validator.maskify(numberValue);
     //   ejecutar la funcion isValid e isMaskify
-    validText.style.display = "block";
-    errorText.style.display = "none";
+    
     formContainer.style.display = "block";
 
     inputNumber.value = numMaskify;
     inputNumber.disabled = true;
     btn.style.display = "none";
     btnSave.style.display = "block";
+    btnRegister.style.display = "block";
     cardNumber.innerHTML = `${numMaskify}`;
+    inputNumber.classList.remove("errorText");
+    inputNumber.classList.add("validText");
 
     btnSave.addEventListener("click", (e) => {
       e.preventDefault();
@@ -48,12 +49,16 @@ btn.addEventListener("click", (e) => {
       date.innerHTML = `${dateValue}`;
       cvv.innerHTML = `${cvvValue}`;
     });
+
+    btnRegister.addEventListener("click", ()=>{
+      window.reload();
+    })
   } else {
-    validText.style.display = "none";
-    errorText.style.display = "block";
     cardNumber.innerHTML = ``;
     name.innerHTML = ``;
     date.innerHTML = ``;
     cvv.innerHTML = ``;
+    inputNumber.classList.add("errorText");
+    
   }
 });
