@@ -225,3 +225,9 @@ main{
   display: block;
 }
 }
+@media (min-width: 412px){
+
+main{
+  display: block;
+}
+}
