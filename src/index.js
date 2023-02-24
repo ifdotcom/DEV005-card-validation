@@ -3,7 +3,7 @@ import validator from "./validator.js";
 // traer el nunmero del DOM
 
 const formContainer = document.querySelector(".card__data-container"),
-  btn = document.querySelector(".btn"),
+  btnValitate = document.querySelector(".btnValitate"),
   btnSave = document.querySelector(".btnSave"),
   btnRegister = document.querySelector(".btnRegister"),
   inputNumber = document.querySelector(".numberCard"),
@@ -16,49 +16,63 @@ const formContainer = document.querySelector(".card__data-container"),
   cardNumber = document.querySelector(".card__info-number");
 
 inputNumber.addEventListener("keypress", (e) => {
+  e.charCode > 48 && e.charCode <= 57 ? true : e.preventDefault();
+});
+inputName.addEventListener("keypress", (e) => {
+  e.charCode === 32 ||
+  (e.charCode >= 65 && e.charCode <= 90) ||
+  (e.charCode >= 97 && e.charCode <= 122)
+    ? true
+    : e.preventDefault();
+});
+inputCvv.addEventListener("keypress", (e) => {
   e.charCode >= 48 && e.charCode <= 57 ? true : e.preventDefault();
 });
 
-btn.addEventListener("click", (e) => {
+btnValitate.addEventListener("click", (e) => {
   e.preventDefault();
   // obtener el valor de los input
   const numberValue = inputNumber.value;
 
   //   validar si solo son numeros
   if (validator.isValid(numberValue) !== false) {
+    // llamo a la funcion maskify para traer el numero cifrado
     const numMaskify = validator.maskify(numberValue);
-    //   ejecutar la funcion isValid e isMaskify
-    
     formContainer.style.display = "block";
-
     inputNumber.value = numMaskify;
     inputNumber.disabled = true;
-    btn.style.display = "none";
+    btnValitate.style.display = "none";
     btnSave.style.display = "block";
     btnRegister.style.display = "block";
     cardNumber.innerHTML = `${numMaskify}`;
     inputNumber.classList.remove("errorText");
     inputNumber.classList.add("validText");
-
-    btnSave.addEventListener("click", (e) => {
-      e.preventDefault();
-      const nameValue = inputName.value,
-        dateValue = inputDate.value,
-        cvvValue = inputCvv.value;
-      name.innerHTML = `${nameValue}`;
-      date.innerHTML = `${dateValue}`;
-      cvv.innerHTML = `${cvvValue}`;
-    });
-
-    btnRegister.addEventListener("click", ()=>{
-      window.reload();
-    })
   } else {
     cardNumber.innerHTML = ``;
-    name.innerHTML = ``;
-    date.innerHTML = ``;
-    cvv.innerHTML = ``;
     inputNumber.classList.add("errorText");
-    
   }
+});
+btnSave.addEventListener("click", (e) => {
+  e.preventDefault();
+  const nameValue = inputName.value,
+    dateValue = inputDate.value,
+    cvvValue = inputCvv.value;
+  if (nameValue === "" && dateValue === "" && cvvValue === "") {
+    inputName.classList.add("errorText");
+    inputDate.classList.add("errorText");
+    inputCvv.classList.add("errorText");
+  } else {
+    name.innerHTML = nameValue;
+    date.innerHTML = dateValue;
+    cvv.innerHTML = cvvValue;
+    inputName.classList.remove("errorText");
+    inputDate.classList.remove("errorText");
+    inputCvv.classList.remove("errorText");
+    inputName.classList.add("validText");
+    inputDate.classList.add("validText");
+    inputCvv.classList.add("validText");
+  }
+});
+btnRegister.addEventListener("click", () => {
+  window.reload();
 });
