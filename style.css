@@ -284,7 +284,7 @@ form {
   }
   .form {
     height: 500px;
-    width: 250px;
+    width: 300px;
     margin-left: 0;
     margin-top: 70px;
   }
@@ -292,8 +292,8 @@ form {
     justify-content: start;
   }
   .card {
-     width: 340px;
-  height: 200px;
+   width: 370px;
+height: 215px;
     margin-top: 30px;
   }
   .card__info:first-child {
@@ -309,7 +309,7 @@ form {
   .card__info-card,
   .card__info-number-card,
   .card__info-data {
-    height: 40px;
+    height: 44px;
   }
 
   .card__info-card > img {
@@ -329,13 +329,27 @@ form {
     padding: 0 25px;
   }
 
-  .card__data {
+  .card__data, .btn__container {
     flex-direction: column;
     gap: 0;
   }
-  .btn__container {
+   
+  
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  main {
     flex-direction: column;
-    gap: 0;
   }
+  .form {
+    height: 500px;
+    width: 450px;
+    margin-left: 0;
+    margin-top: 70px;
+  }
+  form {
+    justify-content: start;
+  }
+
   
 }
