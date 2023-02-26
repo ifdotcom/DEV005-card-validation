@@ -222,14 +222,17 @@ form {
     flex-direction: column;
   }
   .form {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
+    height: 500px;
+    width: 250px;
+    margin-left: 0;
+    margin-top: 70px;
   }
-
+  form {
+    justify-content: start;
+  }
   .card {
-    width: 270px;
-    height: 175px;
+     width: 290px;
+  height: 180px;
     margin-top: 30px;
   }
   .card__info:first-child {
@@ -265,21 +268,74 @@ form {
     padding: 0 15px;
   }
 
-  .form {
-    height: 500px;
-    width: 250px;
-    margin-left: 0;
-  }
   .card__data {
     flex-direction: column;
     gap: 0;
   }
   .btn__container {
-    
     flex-direction: column;
     gap: 0;
-}
+  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
+   main {
+    flex-direction: column;
+  }
+  .form {
+    height: 500px;
+    width: 250px;
+    margin-left: 0;
+    margin-top: 70px;
+  }
+  form {
+    justify-content: start;
+  }
+  .card {
+     width: 340px;
+  height: 200px;
+    margin-top: 30px;
+  }
+  .card__info:first-child {
+    margin-top: 10px;
+  }
+
+  .card__info-data-name,
+  .card__info-data-expiry,
+  .card__info-data-cvv {
+    font-size: 1rem;
+  }
+  .card__info-chip,
+  .card__info-card,
+  .card__info-number-card,
+  .card__info-data {
+    height: 40px;
+  }
+
+  .card__info-card > img {
+    width: 12%;
+  }
+
+  .card__info-chip > img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .card__info-number {
+    font-size: 2.5rem;
+    margin-top: 8px;
+  }
+  .card__info-data {
+    padding: 0 25px;
+  }
+
+  .card__data {
+    flex-direction: column;
+    gap: 0;
+  }
+  .btn__container {
+    flex-direction: column;
+    gap: 0;
+  }
+  
 }
