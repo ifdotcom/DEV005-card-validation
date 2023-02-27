@@ -45,7 +45,7 @@ Permite validar una tarjeta de crédito mediante el algoritmo de Luhn.
    
 ### Vista
 
-![](./src/bancode.jpg)
+![](./src/img/bancode.jpg)
 
 ### Link
 URL: [Card Validation | BanCode](https://ifdotcom.github.io/DEV005-card-validation/)
