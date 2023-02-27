@@ -237,7 +237,7 @@ form {
     margin-top: 30px;
   }
   .card__info:first-child {
-    height:  170px;
+    height:  200px;
     margin-top: 10px;
   }
 
@@ -299,7 +299,7 @@ height: 215px;
     margin-top: 30px;
   }
   .card__info:first-child {
-    height:  170px;
+    height:  200px;
     margin-top: 10px;
   }
 
@@ -352,6 +352,9 @@ height: 215px;
   }
   form {
     justify-content: start;
+  }
+  .card{
+        margin-top: 30px;
   }
 
   
