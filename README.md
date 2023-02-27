@@ -12,6 +12,7 @@
     - [Funcionalidad:](#funcionalidad)
     - [Interacción:](#interacción)
     - [Vista](#vista)
+    - [Link](#link)
   - [Objetivos de aprendizaje](#objetivos-de-aprendizaje)
     - [HTML](#html)
     - [CSS](#css)
@@ -46,6 +47,8 @@ Permite validar una tarjeta de crédito mediante el algoritmo de Luhn.
 
 ![](./src/bancode.jpg)
 
+### Link
+URL: [Card Validation | BanCode](https://ifdotcom.github.io/DEV005-card-validation/)
   
 
 ## Objetivos de aprendizaje
