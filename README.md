@@ -56,16 +56,16 @@ Permite validar una tarjeta de crédito mediante el algoritmo de Luhn.
 
   
 
-- [X ] **Uso de HTML semántico**
+- [X] **Uso de HTML semántico**
   
 
 ### CSS
 
   
 
-- [X ] **Uso de selectores de CSS**
+- [X] **Uso de selectores de CSS**
 
-- [X ] **Modelo de caja (box model): borde, margen, padding**
+- [X] **Modelo de caja (box model): borde, margen, padding**
 
 
   
@@ -74,7 +74,7 @@ Permite validar una tarjeta de crédito mediante el algoritmo de Luhn.
 
   
 
-- [X ] **Uso de selectores del DOM**
+- [X] **Uso de selectores del DOM**
 
   
 
@@ -82,14 +82,14 @@ Permite validar una tarjeta de crédito mediante el algoritmo de Luhn.
 
   
 
-- [X ] **Manejo de eventos del DOM (listeners, propagación, delegación)**
+- [X] **Manejo de eventos del DOM (listeners, propagación, delegación)**
 
   
 
 
   
 
-- [X ] **Manipulación dinámica del DOM**
+- [X] **Manipulación dinámica del DOM**
 
 
 
@@ -99,51 +99,51 @@ Permite validar una tarjeta de crédito mediante el algoritmo de Luhn.
 
   
 
-- [X ] **Tipos de datos primitivos**
+- [X] **Tipos de datos primitivos**
 
   
-- [X ] **Strings (cadenas de caracteres)**
+- [X] **Strings (cadenas de caracteres)**
 
   
   
 
-- [X ] **Variables (declaración, asignación, ámbito)**
+- [X] **Variables (declaración, asignación, ámbito)**
 
 
-- [X ] **Uso de condicionales (if-else, switch, operador ternario, lógica booleana)**
-
-  
-
-- [X ] **Uso de bucles/ciclos (while, for, for..of)**
+- [X] **Uso de condicionales (if-else, switch, operador ternario, lógica booleana)**
 
   
 
-  
-
-- [X ] **Funciones (params, args, return)**
+- [x] **Uso de bucles/ciclos (while, for, for..of)**
 
   
 
   
 
-- [ ] **Pruebas unitarias (unit tests)**
+- [X] **Funciones (params, args, return)**
 
   
 
   
 
-- [X ] **Módulos de ECMAScript (ES Modules)**
+- [x] **Pruebas unitarias (unit tests)**
+
+  
+
+  
+
+- [X] **Módulos de ECMAScript (ES Modules)**
 
   
 
 
   
 
-- [ ] **Uso de linter (ESLINT)**
+- [x] **Uso de linter (ESLINT)**
 
   
 
-- [ ] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
+- [x] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
 
   
 
@@ -151,19 +151,19 @@ Permite validar una tarjeta de crédito mediante el algoritmo de Luhn.
 
   
 
-- [X ] **Git: Instalación y configuración**
+- [X] **Git: Instalación y configuración**
 
   
 
-- [X ] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
+- [X] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
 
   
 
-- [X ] **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
+- [X] **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
 
   
 
-- [X ] **GitHub: Despliegue con GitHub Pages**
+- [X] **GitHub: Despliegue con GitHub Pages**
 
   
 
@@ -174,7 +174,7 @@ Permite validar una tarjeta de crédito mediante el algoritmo de Luhn.
 
   
 
-- [X ] **Diseñar y desarrollar un producto o servicio poniendo a las usuarias en el centro**
+- [X] **Diseñar y desarrollar un producto o servicio poniendo a las usuarias en el centro**
 
   
 
@@ -182,11 +182,11 @@ Permite validar una tarjeta de crédito mediante el algoritmo de Luhn.
 
   
 
-- [X ] **Crear prototipos de alta fidelidad que incluyan interacciones**
+- [X] **Crear prototipos de alta fidelidad que incluyan interacciones**
 
   
 
-- [X ] **Seguir los principios básicos de diseño visual**
+- [X] **Seguir los principios básicos de diseño visual**
 
   
   
@@ -200,18 +200,18 @@ Criterios de aceptación:
 
   
 
-* [ ] Tiene una interfaz que permite a la usuaria saber si la tarjeta es valido
+* [x] Tiene una interfaz que permite a la usuaria saber si la tarjeta es valido
 
 y ocultar el numero hasta las 4 ultimos digitos.
 
-* [ ] El proyecto será entregado incluyendo pruebas unitarios de los métodos de
+* [x] El proyecto será entregado incluyendo pruebas unitarios de los métodos de
 
 `validator` (`isValid` y `maskify`).
 
-* [ ] El proyecto será entregado libre de _errores_ de `eslint` (_warnings_ son ok).
+* [x] El proyecto será entregado libre de _errores_ de `eslint` (_warnings_ son ok).
 
-* [ ] El proyecto será entregado subiendo tu código a GitHub.
+* [x] El proyecto será entregado subiendo tu código a GitHub.
 
-* [ ] La interfaz será "desplegada" usando GitHub Pages.
+* [x] La interfaz será "desplegada" usando GitHub Pages.
 
-* [ ] El README contiene una definición del producto.
+* [x] El README contiene una definición del producto.
